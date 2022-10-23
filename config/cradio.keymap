@@ -43,7 +43,7 @@
         default_layer {
             bindings = <
             //  pos 0        pos 1        pos 2        pos 3        pos 4      |    pos 5       pos 6        pos 7        pos 8        pos 9
-                &kp Q        &kp W        &kp E        &kp R        &kp T           &bt BT_CLR       &kp U        &kp I        &kp O        &kp P
+                &bt BT_CLR        &kp W        &kp E        &kp R        &kp T           &bt BT_CLR       &kp U        &kp I        &kp O        &kp P
             //  pos 10       pos 11       pos 12       pos 13       pos 14     |    pos 15      pos 16       pos 17       pos 18       pos 19 
                 &hm_l LSFT A &hm_l LCTL S &hm_l LALT D &hm_l LGUI F &kp G           &kp H       &hm_r RGUI J &hm_r RALT K &hm_r RCTL L &hm_r RSFT QUOT
             //  pos 20       pos 21       pos 22       pos 23       pos 24     |    pos 25      pos 26       pos 27       pos 28       pos 29 
