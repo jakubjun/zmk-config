@@ -49,7 +49,7 @@
             //  pos 20       pos 21       pos 22       pos 23       pos 24     |    pos 25      pos 26       pos 27       pos 28       pos 29 
                 &kp Z        &kp X        &kp C        &kp V        &kp B           &kp N       &kp M        &kp CMMA     &kp DOT      &kp FSLH
             //                                         pos 30       pos 31     |    pos 32      pos 33
-                                                       &lt 1 ESC    &kp TAB         &kp SPC     &lt 1 BKSP
+                                                       &bt BT_CLR     &bt BT_CLR         &bt BT_CLR    &bt BT_CLR
             >;
         };
  
