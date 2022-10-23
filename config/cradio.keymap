@@ -1,0 +1,88 @@
+/*
+ * Copyright (c) 2020 The ZMK Contributors
+ *
+ * SPDX-License-Identifier: MIT
+ */
+
+#include <behaviors.dtsi>
+#include <dt-bindings/zmk/keys.h>a
+#include <dt-bindings/zmk/bt.h>
+
+
+&lt {
+   flavor = "balanced";
+   tapping_term_ms = <800>;
+};
+
+/ { 
+
+    behaviors {
+        hm_l: left_hand_positional_hold_tap {
+            compatible = "zmk,behavior-hold-tap";
+            label = "POSITIONAL_HOLD_TAP_LEFT";
+            #binding-cells = <2>;
+            flavor = "tap-unless-interrupted";
+            tapping-term-ms = <800>;                        
+            bindings = <&kp>, <&kp>;
+            hold-trigger-key-positions = <5 6 7 8 9  15 16 17 18 19  25 26 27 28 29  30 31 32 33>;    // <---[[right-hand keys + thumbs]]
+        };
+        hm_r: right_hand_positional_hold_tap {
+            compatible = "zmk,behavior-hold-tap";
+            label = "POSITIONAL_HOLD_TAP_RIGHT";
+            #binding-cells = <2>;
+            flavor = "tap-unless-interrupted";
+            tapping-term-ms = <800>;                        
+            bindings = <&kp>, <&kp>;
+            hold-trigger-key-positions = <0 1 2 3 4  10 11 12 13 14  20 21 22 23 24  30 31 32 33>;    // <---[[left-hand keys + thumbs]]
+        };
+    };
+
+    keymap {
+        compatible = "zmk,keymap";
+            
+        default_layer {
+            bindings = <
+            //  pos 0        pos 1        pos 2        pos 3        pos 4      |    pos 5       pos 6        pos 7        pos 8        pos 9
+                &kp Q        &kp W        &kp E        &kp R        &kp T           &kp Y       &kp U        &kp I        &kp O        &kp P
+            //  pos 10       pos 11       pos 12       pos 13       pos 14     |    pos 15      pos 16       pos 17       pos 18       pos 19 
+                &hm_l LSFT A &hm_l LCTL S &hm_l LALT D &hm_l LGUI F &kp G           &kp H       &hm_r RGUI J &hm_r RALT K &hm_r RCTL L &hm_r RSFT QUOT
+            //  pos 20       pos 21       pos 22       pos 23       pos 24     |    pos 25      pos 26       pos 27       pos 28       pos 29 
+                &kp Z        &kp X        &kp C        &kp V        &kp B           &kp N       &kp M        &kp CMMA     &kp DOT      &kp FSLH
+            //                                         pos 30       pos 31     |    pos 32      pos 33
+                                                       &lt 1 ESC    &kp TAB         &kp SPC     &lt 1 BKSP
+            >;
+        };
+ 
+        left_layer {
+            bindings = <
+            //  pos 0        pos 1        pos 2        pos 3        pos 4      |    pos 5       pos 6        pos 7        pos 8        pos 9
+                &kp NUM_1    &kp NUM_2    &kp NUM_3    &kp NUM_4    &kp NUM_5		&kp NUM_6   &kp NUM_7    &kp NUM_8    &kp NUM_9    &kp NUM_0 
+            //  pos 10       pos 11       pos 12       pos 13       pos 14     |    pos 15      pos 16       pos 17       pos 18       pos 19 
+            &hm_l LSFT GRAVE &hm_l LCTL S &hm_l LALT D &hm_l LGUI F &kp G           &kp LBKT    &hm_r RGUI S &hm_r RALT S &hm_r RCTL RBKT &hm_r RSFT QUOT
+            //  pos 20       pos 21       pos 22       pos 23       pos 24     |    pos 25      pos 26       pos 27       pos 28       pos 29 
+                &kp Z        &kp X        &kp C        &kp V        &kp B           &kp TILDE   &kp MINUS    &kp EQL      &kp PIPE     &kp BSLH
+            //                                         pos 30       pos 31     |    pos 32      pos 33
+                                                       &mo 2        &kp TAB         &kp SPC     &mo 2
+            >;
+        };
+    
+        right_layer {
+            bindings = <
+            &kp BANG  &kp ATSN &kp HASH  &kp DLLR  &kp PRCT    			&kp CRRT  &kp AMPS &kp KMLT &kp LPRN &kp RPRN 
+            &kp HASH  &kp QMARK  &kp FSLH  &kp COLN  &kp SCLN 			&kp MINUS &kp KP_EQUAL  &kp LBRC  &kp RBRC   &kp BKSP
+            &kp LSFT  &kp KPLS &kp LBKT &kp RBKT   &kp BSLH    			&kp UNDER &kp LEFT &kp DOWN &kp UP  &kp RIGHT
+                        &mo 3 &kp LCTL  				&kp SPC  &mo 2 
+            >;
+        };	
+    
+        tri_layer {
+            bindings = <
+            &kp NUM_1  &kp NUM_2    &kp NUM_3    &kp NUM_4    &kp NUM_5 			&trans &trans   &trans   &trans  &trans
+            &kp F1 &kp F2 &kp F3 &kp F4 &kp F5  						&trans &kp PG_UP  &kp K_VOL_UP &kp K_MUTE &trans 
+            &bt BT_CLR  &bt BT_NXT &bt BT_PRV &kp F6 &kp F7   				&trans &kp PG_DN  &kp K_VOL_DN  &trans &trans   
+                        &trans &trans  					&trans &trans 
+            >;
+        };	
+    
+    };
+};
