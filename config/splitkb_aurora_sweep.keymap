@@ -44,7 +44,7 @@
 		three {
 		bindings = <
 		&kp LS(LG(Q))  &kp LS(LG(V))    &kp LS(LG(H))    &kp LS(LG(F))    &none &none &none   &none &none
-		&kp LS(LG(R)) &kp LS(LG(W)) &kp LS(LG(S)) &kp LS(LG(E)) LS(LG(G))  						&kp LS(LG(J)) &kp LS(LG(K))  &kp LS(LG(L)) &kp LS(LG(SEMICOLON)) &kp LS(LG(A)) 
+		&kp LS(LG(R)) &kp LS(LG(W)) &kp LS(LG(S)) &kp LS(LG(E)) &kp LS(LG(G))  						&kp LS(LG(J)) &kp LS(LG(K))  &kp LS(LG(L)) &kp LS(LG(SEMICOLON)) &kp LS(LG(A)) 
 		&bt BT_CLR  &bt BT_NXT &bt BT_PRV &kp F6 &kp F7   				&trans &kp PG_DN  &kp K_VOL_DN  &trans &trans   
 					 &none &none  					&none &none 
 		>;
