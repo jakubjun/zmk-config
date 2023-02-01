@@ -52,6 +52,15 @@
 		>;
 		};	
 
+		fifth_layer {
+		bindings = <
+		&none  &none    &none    &none    &none 		  &none	&none &none   &none   &none
+		&none  &none    &none    &none    &none 		  &kp LG(LS(J))	&kp LG(LG(K)) &kp LG(LS(L))   &nkp LG(LS(SEMICOLON))   &none
+		&none  &none    &none    &none    &none 		  &none	&none &none   &none   &none
+					 &none &none  					&none &none
+		>;
+		};	
+
 
 		sixth_layer {
 		bindings = <
