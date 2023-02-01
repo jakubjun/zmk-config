@@ -91,10 +91,10 @@
 		
 		tri_layer {
 		bindings = <
-		&kp NUM_1  &kp NUM_2    &kp NUM_3    &kp NUM_4    &kp NUM_5 			&trans &trans   &trans   &trans  &trans
-		&kp F1 &kp F2 &kp F3 &kp F4 &kp F5  						&trans &kp PG_UP  &kp K_VOL_UP &kp K_MUTE &trans 
-		&bt BT_CLR  &bt BT_NXT &bt BT_PRV &kp F6 &kp F7   				&trans &kp PG_DN  &kp K_VOL_DN  &trans &trans   
-					 &trans &trans  					&trans &trans 
+		&kp LC(C)  &kp LC(V)    &kp GRAVE    &kp BACKSLASH    &kp LG(LS(SPACE)) 			&kp UNDERSCORE &kp MINUS   &kp SQT   &kp DQT  &kp PIPE
+		&kp ESC &kp LCTRL &kp LGUI &kp LSHIFT &kp LALT  						&kp LEFT &kp DOWN  &kp UP &kp RIGHT &kp PSCRN 
+		&kp LG(SPACE)  &kp LG(M) &kp LG(N)  &kp LG(MINUS) &kp LG(LS(MINUS))   				&kp TAB &kp PG_DN  &kp PG_UP  &kp ENTER &kp TILDE   
+					 &none &none  					&kp LSHIFT &mo 3
 		>;
 		};	
         
