@@ -79,8 +79,8 @@
 
 		seventh_layer {
 		bindings = <
-		&kt LC(BACKSPACE)  &none    &none    &none    &none 			&none &kp LG(NUM_7) &kp LG(NUM_8)   &kp LG(NUM_9)  &none
-		&kt BACKSPACE  &none    &none    &none    &none 			&none &kp LG(NUM_4) &kp LG(NUM_5)   &kp LG(NUM_6)   &kp LG(NUM_0)
+		&kp LC(BACKSPACE)  &none    &none    &none    &none 			&none &kp LG(NUM_7) &kp LG(NUM_8)   &kp LG(NUM_9)  &none
+		&kp BACKSPACE  &none    &none    &none    &none 			&none &kp LG(NUM_4) &kp LG(NUM_5)   &kp LG(NUM_6)   &kp LG(NUM_0)
 		&tog 6  &none  &none    &none    &none 			&none &kp LG(NUM_1) &kp LG(NUM_2)   &kp LG(NUM_3)  &none
 					 &none &none  					&mo 5 &mo 7
 		>;
