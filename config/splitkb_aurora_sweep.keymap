@@ -19,7 +19,7 @@
 		&kp Q &kp D &kp R &kp W &kp B 						&bt J &kp F  &kp U    &kp P   &kp SEMICOLON 
 		&kp A &kp S &kp H &kp T &kp G 			        	&kp Y &kp N  &kp E    &kp O   &kp I
 		&kp Z &kp X &kp M &kp C &kp V				        &kp K &kp L  &kp CMMA &kp DOT &kp SLASH
-          				  &mo 2 &mo 2  				        &kp SPC &mo 1 
+          				  &mo 2 &mo 6  				        &kp SPC &mo 1 
 		>;
 		};
 
@@ -32,7 +32,7 @@
 		>;
 		};
 		
-		two {
+		second_layer {
 		bindings = <
 		&kp LC(C)  &kp LC(V) &kp GRAVE  &kp BACKSLASH  &kp LS(LG(SPACE))    			&kp UNDERSCORE  &kp MINUS &kp SQT &kp DQT &kp PIPE 
 		&kp ESC  &kp LCTRL  &kp LGUI  &kp LSHIFT  &kp LALT 			&kp LEFT &kp DOWN  &kp UP  &kp RIGHT   &kp PSCRN
@@ -41,7 +41,7 @@
 		>;
 		};	
 		
-		three {
+		third_layer {
 		bindings = <
 		&kp LS(LG(Q))  &kp LS(LG(V))    &kp LS(LG(H))    &kp LS(LG(F))    &none &none &none   &none &none
 		&kp LS(LG(R)) &kp LS(LG(W)) &kp LS(LG(S)) &kp LS(LG(E)) &kp LS(LG(G))  						&kp LS(LG(J)) &kp LS(LG(K))  &kp LS(LG(L)) &kp LS(LG(SEMICOLON)) &kp LS(LG(A)) 
@@ -50,5 +50,6 @@
 		>;
 		};	
         
+        };
 	};
 };
