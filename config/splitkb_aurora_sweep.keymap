@@ -47,8 +47,8 @@
 		bindings = <
 		&kp LG(Q)  &kp LG(V)    &kp LG(H)    &kp LG(F)    &none 			&none &none   &none   &none  &none
 		&kp LG(R) &kp LG(W) &kp LG(S) &kp LG(E) &kp LG(G)  						&kp LG(J) &kp LG(K)  &kp LG(L) &kp LG(SEMICOLON) &kp LG(A) 
-		&kp LG(LS(Q))  &kp LG(LS(R)) &kp LG(D)  &kp LG(RETURN) &none   				&none &none  &none  &none &none   
-					 &mo 4 &mo 4  					&none &none
+		&none &none  &none  &kp LG(LS(Q))  &kp LG(LS(R)) &kp LG(D)  &kp LG(RETURN) &none  &none &none 				   
+					 &none &mo 4  					&mo 4 &none
 		>;
 		};	
 
