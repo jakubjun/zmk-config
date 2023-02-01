@@ -73,10 +73,10 @@
 
        		left_layer {
 		bindings = <
-		&kp NUM_1  &kp NUM_2    &kp NUM_3    &kp NUM_4    &kp NUM_5		&kp NUM_6 &kp NUM_7 &kp NUM_8 &kp NUM_9 &kp NUM_0 
-		&kp TAB    &kp LC(S)    &kp DQT      &kp PIPE2     &kp HASH 		&kp MINUS &kp EQL  &kp LBKT &kp RBKT  &kp DEL 
-		&kp ESC    &kp TILDE 	&kp NON_US_BSLH &kp NON_US_HASH  &kp TILDE2 	&kp MINUS &kp GRAVE &kp LBKT &kp RBKT  &kp DEL 
-					    &mo 1  &kp LGUI  					&kp RGUI &mo 2 
+		&kp EXCL  &kp AT    &kp EQUAL    &kp DOLLAR    &kp PERCENT		&kp LG(LS(B)) &kp NUM_7 &kp NUM_8 &kp NUM_9 &kp DOT 
+		&kp LPAR    &kp ASTERISK    &kp CARET      &kp AMPS     &kp RPAR 		&kp LG(U) &kp NUM_4  &kp NUM_5 &kp NUM_6  &kp NUM_0 
+		&kp LBKT    &kp RBKT 	&kp HASH &kp LBRC  &kp RBRC 	&kp CAPS &kp NUM_1 &kp NUM_2 &kp NUM_3  &kp KP_PLUS 
+					    &mo 3  &kp LCTRL  					&none &none 
 		>;
 		};
 		
