@@ -25,21 +25,13 @@
 
        		numbers_layer {
 		bindings = <
-		&kp EXCL  &kp AT    &kp EQUAL    &kp DOLLAR    &kp PERCENT		&kp LG(B) &kp NUM_7 &kp NUM_8 &kp NUM_9 &kp DOT 
-		&kp LPAR    &kp ASTRK    &kp CARET      &kp AMPS     &kp RPAR 		&kp LG(U) &kp NUM_4  &kp NUM_5 &kp NUM_6  &kp NUM_0 
-		&kp LBKT    &kp RBKT 	&kp HASH &kp LBRC  &kp RBRC 	&kp CAPS &kp NUM_1 &kp NUM_2 &kp NUM_3  &kp KP_PLUS 
-					    &mo 3  &kp LCTRL  					&none &none 
+		&kp EXCL &kp AT &kp EQUAL &kp DOLLAR &kp PERCENT		&kp LG(B) &kp NUM_7 &kp NUM_8 &kp NUM_9 &kp DOT 
+		&kp LPAR &kp ASTRK &kp CARET &kp AMPS &kp RPAR 		&kp LG(U) &kp NUM_4  &kp NUM_5 &kp NUM_6  &kp NUM_0 
+		&kp LBKT &kp RBKT &kp HASH &kp LBRC &kp RBRC 	&kp CAPS &kp NUM_1 &kp NUM_2 &kp NUM_3  &kp KP_PLUS 
+					    &mo 3 &kp LCTRL  					&none &none 
 		>;
 		};
 		
-		second_layer {
-		bindings = <
-		&kp LC(C)  &kp LC(V) &kp GRAVE  &kp BACKSLASH  &kp LS(LG(SPACE))    			&kp UNDERSCORE  &kp MINUS &kp SQT &kp DQT &kp PIPE 
-		&kp ESC  &kp LCTRL  &kp LGUI  &kp LSHIFT  &kp LALT 			&kp LEFT &kp DOWN  &kp UP  &kp RIGHT   &kp PSCRN
-		&kp LG(SPACE)  &kp LG(M) &kp LG(N) &kp LG(MINUS)   &kp LS(LG(MINUS))    			&kp TAB &kp PG_DN &kp PG_UP &kp ENTER  &kp TILDE
-					  &none &none  				&kp LSHIFT  &mo 3 
-		>;
-		};	
 		
 	};
 };
