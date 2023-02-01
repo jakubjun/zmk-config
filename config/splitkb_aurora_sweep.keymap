@@ -35,9 +35,9 @@
 		two {
 		bindings = <
 		&kp LC(C)  &kp LC(V) &kp GRAVE  &kp BACKSLASH  &kp LS(LGUI(SPC))    			&kp UNDERSCORE  &kp MINUS &kp SQT &kp DQT &kp PIPE 
-		&kp ESC  &kp LCTRL  &kp LGUI  &kp LS  &kp LALT 			&kp LEFT &kp DOWN  &kp UP  &kp RIGHT   &kp PSCRN
+		&kp ESC  &kp LCTRL  &kp LGUI  &kp LSHIFT  &kp LALT 			&kp LEFT &kp DOWN  &kp UP  &kp RIGHT   &kp PSCRN
 		&kp LGUI(SPC)  &kp LGUI(M) &kp LGUI(N) &kp LGUI(MINUS)   &kp LS(LGUI(MINUS))    			&kp TAB &kp PG_DN &kp PG_UP &kp ENTER  &kp TILDE
-					  &none &none  				&kp LS  &mo 3 
+					  &none &none  				&kp LSHIFT  &mo 3 
 		>;
 		};	
 		
