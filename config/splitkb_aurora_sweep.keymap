@@ -19,7 +19,7 @@
 		&kp Q &kp D &kp R &kp W &kp B 						&bt J &kp F  &kp U    &kp P   &kp SEMICOLON 
 		&kp A &kp S &kp H &kp T &kp G 			        	&kp Y &kp N  &kp E    &kp O   &kp I
 		&kp Z &kp X &kp M &kp C &kp V				        &kp K &kp L  &kp CMMA &kp DOT &kp SLASH
-          				  &mo 2 &mo 6  				        &kp SPC &mo 1 
+          				  &mo 2 &mo 6  				        &kp SPACE &mo 1 
 		>;
 		};
 
