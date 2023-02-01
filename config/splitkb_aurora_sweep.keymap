@@ -48,7 +48,6 @@
 		&bt BT_CLR  &bt BT_NXT &bt BT_PRV &kp F6 &kp F7   				&trans &kp PG_DN  &kp K_VOL_DN  &trans &trans   
 					 &none &none  					&none &none 
 		>;
-		};	
         
         };
 	};
