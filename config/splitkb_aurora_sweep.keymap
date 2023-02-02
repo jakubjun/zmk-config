@@ -84,9 +84,9 @@
 
 		eight_layer {
 		bindings = <
-		&bt BT_CLR  &bt BT_NXT    &bt BT_PRV    &none    &none 			&none &none   &none   &none  &none
-		&none  &none    &none    &none    &none 			&none &none   &none   &none  &none
-		&none  &none    &none    &none    &none 			&none &none   &none   &none  &none
+		&bt BT_CLR  &bt BT_NXT    &bt BT_PRV    &none    &none 			&none &kp LG(LS(NUM_7)) &kp LG(LS(NUM_8))   &kp LG(LS(NUM_9))   &none
+		&none  &none    &none    &none    &none 			&none &kp LG(LS(NUM_4))   &kp LG(LS(NUM_5))   &kp LG(LS(NUM_6))  &none
+		&none  &none    &none    &none    &none 			&none &kp LG(LS(NUM_1))   &kp LG(LS(NUM_2))   &kp LG(LS(NUM_3))  &none
 					 &none &none  					&none &none
 		>;
 		};	
