@@ -6,7 +6,8 @@
 
 #include <behaviors.dtsi>
 #include <dt-bindings/zmk/keys.h>
-#include <dt-bindings/zmk/bt.h>
+#include <dt-bindings/zmk/bt.h> 
+#include <dt-bindings/zmk/mouse.h>
 
 
 / { 
@@ -74,9 +75,9 @@
 
 		seventh_layer {
 		bindings = <
-		&kp LC(BACKSPACE)  &none    &none    &none    &none 			&none &kp LG(NUM_7) &kp LG(NUM_8)   &kp LG(NUM_9)  &none
-		&kp BACKSPACE  &none    &none    &none    &none 			&none &kp LG(NUM_4) &kp LG(NUM_5)   &kp LG(NUM_6)   &kp LG(NUM_0)
-		&tog 6  &none  &none    &none    &none 			&none &kp LG(NUM_1) &kp LG(NUM_2)   &kp LG(NUM_3)  &none
+		&kp LC(BACKSPACE)  &none    &none    &mwh SCROLL_UP    &none 			&none &kp LG(NUM_7) &kp LG(NUM_8)   &kp LG(NUM_9)  &none
+		&kp BACKSPACE  &mkp MCK    &mkp RCK    &mkp LCK    &none 			&none &kp LG(NUM_4) &kp LG(NUM_5)   &kp LG(NUM_6)   &kp LG(NUM_0)
+		&tog 6  &none  &none    &none    &mwh SCROLL_DOWN 			&none &kp LG(NUM_1) &kp LG(NUM_2)   &kp LG(NUM_3)  &none
 					 &none &none  					&mo 5 &mo 7
 		>;
 		};	
