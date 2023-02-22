@@ -75,7 +75,7 @@
 
 		seventh_layer {
 		bindings = <
-		&kp LC(BACKSPACE)  &none    &none    &mwh SCROLL_UP    &none 			&none &kp LG(NUM_7) &kp LG(NUM_8)   &kp LG(NUM_9)  &none
+		&kp LC(BACKSPACE)  &none    &mwh SCROLL_UP  &none    &none 			&none &kp LG(NUM_7) &kp LG(NUM_8)   &kp LG(NUM_9)  &none
 		&kp BACKSPACE  &mkp MCLK    &mkp RCLK    &mkp LCLK    &none 			&none &kp LG(NUM_4) &kp LG(NUM_5)   &kp LG(NUM_6)   &kp LG(NUM_0)
 		&tog 6  &none  &none    &none    &mwh SCROLL_DOWN 			&none &kp LG(NUM_1) &kp LG(NUM_2)   &kp LG(NUM_3)  &none
 					 &none &none  					&mo 5 &mo 7
@@ -85,9 +85,9 @@
 
 		eight_layer {
 		bindings = <
-		&bt BT_CLR  &bt BT_NXT    &bt BT_PRV    &none    &none 			&none &kp LG(LS(NUM_7)) &kp LG(LS(NUM_8))   &kp LG(LS(NUM_9))   &none
+		&bt BT_SEL 1  &bt BT_SEL 2    &bt BT_SEL 3    &bt BT_SEL 4    &bt BT_SEL 5 			&none &kp LG(LS(NUM_7)) &kp LG(LS(NUM_8))   &kp LG(LS(NUM_9))   &none
 		&none  &none    &none    &none    &none 			&none &kp LG(LS(NUM_4))   &kp LG(LS(NUM_5))   &kp LG(LS(NUM_6))  &kp LG(LS(NUM_0))
-		&none  &none    &none    &none    &none 			&none &kp LG(LS(NUM_1))   &kp LG(LS(NUM_2))   &kp LG(LS(NUM_3))  &none
+		&none  &none    &none    &none    &none 			&none &kp LG(LS(NUM_1))   &kp LG(LS(NUM_2))   &kp LG(LS(NUM_3))  &bt BT_CLR
 					 &none &none  					&none &none
 		>;
 		};	
