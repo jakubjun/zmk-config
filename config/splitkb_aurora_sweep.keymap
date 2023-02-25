@@ -13,22 +13,22 @@
 
 #define ALPHAS 0
 #define SYMBOLS_NUMBERS 1
-#define I3BASIC_ARROWS 2
-#define I3SPLIT_I3NAV 3
-#define NONE_I3MOVE 4
-#define NONE_FKEYS 5
-#define MOUSE_I3GOTO 6
-#define BT_I3MOVETO 7
+#define WMBASIC_ARROWS  2
+#define WMSPLIT_WMNAV   3
+#define NONE_WMMOVE     4
+#define NONE_FKEYS      5
+#define MOUSE_WMGOTO    6
+#define BT_WMMOVETO     7
 
 / { 
         keymap {
             compatible = "zmk,keymap";
-       		default_layer {
+       		alphas {
                 bindings = <
                     &kp Q              &kp D &kp R &kp W &kp B 	 &kp J   &kp F &kp U    &kp P   &kp SEMICOLON 
                     &kp A              &kp S &kp H &kp T &kp G 	 &kp Y   &kp N &kp E    &kp O   &kp I
                     &kp Z              &kp X &kp M &kp C &kp V	 &kp K   &kp L &kp CMMA &kp DOT &kp SLASH
-                    &mo I3BASIC_ARROWS &mo MOUSE_I3GOTO          &kp SPC &mo SYMBOLS_NUMBERS  
+                    &mo WMBASIC_ARROWS &mo MOUSE_WMGOTO          &kp SPC &mo SYMBOLS_NUMBERS  
                     >;
             };
 
@@ -37,29 +37,29 @@
                     &kp EXCL          &kp AT       &kp EQUAL &kp DOLLAR &kp PERCENT   &kp LG(LS(B)) &kp NUM_7 &kp NUM_8 &kp NUM_9 &kp DOT 
                     &kp LPAR          &kp ASTERISK &kp CARET &kp AMPS   &kp RPAR 	  &kp LG(U)     &kp NUM_4 &kp NUM_5 &kp NUM_6 &kp NUM_0 
                     &kp LBKT          &kp RBKT 	   &kp HASH  &kp LBRC   &kp RBRC 	  &kp CAPS      &kp NUM_1 &kp NUM_2 &kp NUM_3 &kp KP_PLUS 
-                    &mo I3SPLIT_I3NAV &kp LCTRL  					                  &none         &none 
+                    &mo WMSPLIT_WMNAV &kp LCTRL  					                  &none         &none 
                     >;
             };
 		
-            ibasic_arrows {
+            wmbasic_arrows {
                 bindings = <
                     &kp LC(C)     &kp LC(V) &kp GRAVE &kp BACKSLASH &kp LG(LS(SPACE))   &kp UNDERSCORE &kp MINUS &kp SQT   &kp DQT   &kp PIPE
                     &kp ESC       &kp LCTRL &kp LGUI  &kp LSHIFT    &kp LALT  			&kp LEFT       &kp DOWN  &kp UP    &kp RIGHT &kp PSCRN 
                     &kp LG(SPACE) &kp LG(M) &kp LG(N) &kp LG(MINUS) &kp LG(LS(MINUS))   &kp TAB        &kp PG_DN &kp PG_UP &kp ENTER &kp TILDE   
-                    &none         &none  					                            &kp LSHIFT     &mo I3SPLIT_I3NAV
+                    &none         &none  					                            &kp LSHIFT     &mo WMSPLIT_WMNAV
                     >;
             };	
 
-            i3split_inav {
+            wmsplit_wmnav {
                 bindings = <3
                     &kp LG(Q) &kp LG(V) &kp LG(H) &kp LG(F)     &none 			&none           &none          &none     &none             &none
                     &kp LG(R) &kp LG(W) &kp LG(S) &kp LG(E)     &kp LG(G)  		&kp LG(J)       &kp LG(K)      &kp LG(L) &kp LG(SEMICOLON) &kp LG(A)
                     &none     &none     &none     &kp LG(LS(Q)) &kp LG(LS(R))   &kp LG(D)       &kp LG(RETURN) &none     &none             &none
-                    &none     &mo NONE_I3MOVE  					                &mo NONE_I3MOVE &none
+                    &none     &mo NONE_WMMOVE  					                &mo NONE_WMMOVE &none
                     >;
             };	
 
-            none_imove {
+            none_wmmove {
                 bindings = <
                     &none &none &none &none &none 	  &none	        &none         &none         &none                 &none
                     &none &none &none &none &none 	  &kp LG(LS(J)) &kp LG(LS(K)) &kp LG(LS(L)) &kp LG(LS(SEMICOLON)) &none
@@ -77,16 +77,16 @@
                     >;
             };	
 
-            mouse_igoto {
+            mouse_wmgoto {
                 bindings = <
                     &kp LC(BACKSPACE) &none     &none     &mwh SCROLL_UP   &none    &none          &kp LG(NUM_7) &kp LG(NUM_8) &kp LG(NUM_9) &none
                     &kp BACKSPACE     &mkp MCLK &mkp RCLK &mkp LCLK        &none 	&none          &kp LG(NUM_4) &kp LG(NUM_5) &kp LG(NUM_6) &kp LG(NUM_0)
                     &tog NONE_FKEYS   &none     &none     &mwh SCROLL_DOWN &none 	&none          &kp LG(NUM_1) &kp LG(NUM_2) &kp LG(NUM_3) &none
-                    &none             &none  					                    &mo NONE_FKEYS &mo BT_I3MOVETO
+                    &none             &none  					                    &mo NONE_FKEYS &mo BT_WMMOVETO
                     >;
             };	
 
-            bt_imoveto {
+            bt_wmmoveto {
                 bindings = <
                     &bt BT_SEL 0 &bt BT_SEL 1 &bt BT_SEL 2 &bt BT_SEL 3 &bt BT_SEL 4   &none &kp LG(LS(NUM_7)) &kp LG(LS(NUM_8)) &kp LG(LS(NUM_9)) &none
                     &none        &none        &none        &none        &none 		   &none &kp LG(LS(NUM_4)) &kp LG(LS(NUM_5)) &kp LG(LS(NUM_6)) &kp LG(LS(NUM_0))
