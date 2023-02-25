@@ -9,87 +9,88 @@
 #include <dt-bindings/zmk/bt.h> 
 #include <dt-bindings/zmk/mouse.h>
 
+#define ALPHAS 0
+#define SYMBOLS_NUMBERS 1
+#define I3BASIC_ARROWS 2
+#define I3SPLIT_I3NAV 3
+#define NONE_I3MOVE 4
+#define NONE_FKEYS 5
+#define MOUSE_I3GOTO 6
+#define BT_I3MOVETO 7
 
 / { 
-
-
         keymap {
-                compatible = "zmk,keymap";
-                
-       		default_layer {
-		bindings = <
-		&kp Q &kp D &kp R &kp W &kp B 						&kp J &kp F  &kp U    &kp P   &kp SEMICOLON 
-		&kp A &kp S &kp H &kp T &kp G 			        	        &kp Y &kp N &kp E &kp O &kp I
-		&kp Z &kp X &kp M &kp C &kp V				        &kp K &kp L  &kp CMMA &kp DOT &kp SLASH
-          				&mo 2 &mo 6  				&kp SPC &mo 1 
-		>;
-		};
+            compatible = "zmk,keymap";
+       		alphas {
+                bindings = <
+                    &kp Q              &kp D &kp R &kp W &kp B 	 &kp J   &kp F &kp U    &kp P   &kp SEMICOLON 
+                    &kp A              &kp S &kp H &kp T &kp G 	 &kp Y   &kp N &kp E    &kp O   &kp I
+                    &kp Z              &kp X &kp M &kp C &kp V	 &kp K   &kp L &kp CMMA &kp DOT &kp SLASH
+                    &mo I3BASIC_ARROWS &mo MOUSE_I3GOTO          &kp SPC &mo SYMBOLS_NUMBERS  
+                    >;
+            };
 
-       		left_layer {
-		bindings = <
-		&kp EXCL  &kp AT    &kp EQUAL    &kp DOLLAR    &kp PERCENT		&kp LG(LS(B)) &kp NUM_7 &kp NUM_8 &kp NUM_9 &kp DOT 
-		&kp LPAR    &kp ASTERISK    &kp CARET      &kp AMPS     &kp RPAR 		&kp LG(U) &kp NUM_4  &kp NUM_5 &kp NUM_6  &kp NUM_0 
-		&kp LBKT    &kp RBKT 	&kp HASH &kp LBRC  &kp RBRC 	&kp CAPS &kp NUM_1 &kp NUM_2 &kp NUM_3  &kp KP_PLUS 
-					    &mo 3  &kp LCTRL  					&none &none 
-		>;
-		};
+            symbols_numbers {
+                bindings = <
+                    &kp EXCL          &kp AT       &kp EQUAL &kp DOLLAR &kp PERCENT   &kp LG(LS(B)) &kp NUM_7 &kp NUM_8 &kp NUM_9 &kp DOT 
+                    &kp LPAR          &kp ASTERISK &kp CARET &kp AMPS   &kp RPAR 	  &kp LG(U)     &kp NUM_4 &kp NUM_5 &kp NUM_6 &kp NUM_0 
+                    &kp LBKT          &kp RBKT 	   &kp HASH  &kp LBRC   &kp RBRC 	  &kp CAPS      &kp NUM_1 &kp NUM_2 &kp NUM_3 &kp KP_PLUS 
+                    &mo I3SPLIT_I3NAV &kp LCTRL  					                  &none &none 
+                    >;
+            };
 		
-		tri_layer {
-		bindings = <
-		&kp LC(C)  &kp LC(V)    &kp GRAVE    &kp BACKSLASH    &kp LG(LS(SPACE)) 			&kp UNDERSCORE &kp MINUS   &kp SQT   &kp DQT  &kp PIPE
-		&kp ESC &kp LCTRL &kp LGUI &kp LSHIFT &kp LALT  						&kp LEFT &kp DOWN  &kp UP &kp RIGHT &kp PSCRN 
-		&kp LG(SPACE)  &kp LG(M) &kp LG(N)  &kp LG(MINUS) &kp LG(LS(MINUS))   				&kp TAB &kp PG_DN  &kp PG_UP  &kp ENTER &kp TILDE   
-					 &none &none  					&kp LSHIFT &mo 3
-		>;
-		};	
+            i3basic_arrows {
+                bindings = <
+                    &kp LC(C)     &kp LC(V) &kp GRAVE &kp BACKSLASH &kp LG(LS(SPACE))   &kp UNDERSCORE &kp MINUS &kp SQT   &kp DQT   &kp PIPE
+                    &kp ESC       &kp LCTRL &kp LGUI  &kp LSHIFT    &kp LALT  			&kp LEFT       &kp DOWN  &kp UP    &kp RIGHT &kp PSCRN 
+                    &kp LG(SPACE) &kp LG(M) &kp LG(N) &kp LG(MINUS) &kp LG(LS(MINUS))   &kp TAB        &kp PG_DN &kp PG_UP &kp ENTER &kp TILDE   
+                    &none         &none  					                            &kp LSHIFT     &mo I3SPLIT_I3NAV
+                    >;
+            };	
 
+            i3split_i3nav {
+                bindings = <3
+                    &kp LG(Q) &kp LG(V) &kp LG(H) &kp LG(F)     &none 			&none           &none          &none     &none             &none
+                    &kp LG(R) &kp LG(W) &kp LG(S) &kp LG(E)     &kp LG(G)  		&kp LG(J)       &kp LG(K)      &kp LG(L) &kp LG(SEMICOLON) &kp LG(A)
+                    &none     &none     &none     &kp LG(LS(Q)) &kp LG(LS(R))   &kp LG(D)       &kp LG(RETURN) &none     &none             &none
+                    &none     &mo NONE_I3MOVE  					                &mo NONE_I3MOVE &none
+                    >;
+            };	
 
-		fourth_layer {
-		bindings = <
-		&kp LG(Q)  &kp LG(V)    &kp LG(H)    &kp LG(F)    &none 			&none &none   &none   &none  &none
-		&kp LG(R) &kp LG(W) &kp LG(S) &kp LG(E) &kp LG(G)  						&kp LG(J) &kp LG(K)  &kp LG(L) &kp LG(SEMICOLON) &kp LG(A) 
-		&none &none  &none  &kp LG(LS(Q))  &kp LG(LS(R)) &kp LG(D)  &kp LG(RETURN) &none  &none &none 				   
-					 &none &mo 4  					&mo 4 &none
-		>;
-		};	
+            none_i3move {
+                bindings = <
+                    &none &none &none &none &none 	  &none	        &none         &none         &none                 &none
+                    &none &none &none &none &none 	  &kp LG(LS(J)) &kp LG(LS(K)) &kp LG(LS(L)) &kp LG(LS(SEMICOLON)) &none
+                    &none &none &none &none &none 	  &none	        &none         &none         &none                 &none
+                    &none &none  	                  &none         &none
+                    >;
+            };	
 
-		fifth_layer {
-		bindings = <
-		&none  &none    &none    &none    &none 		  &none	&none &none   &none   &none
-		&none  &none    &none    &none    &none 		  &kp LG(LS(J))	&kp LG(LG(K)) &kp LG(LS(L))   &kp LG(LS(SEMICOLON))   &none
-		&none  &none    &none    &none    &none 		  &none	&none &none   &none   &none
-					 &none &none  					&none &none
-		>;
-		};	
+            none_fkeys {
+                bindings = <
+                    &none &none &none &none &none 	&none &kp F7 &kp F8 &kp F9 &kp F10
+                    &none &none &none &none &none 	&none &kp F4 &kp F5 &kp F6 &kp F11
+                    &none &none &none &none &none 	&none &kp F1 &kp F2 &kp F3 &kp F12
+                    &none &none  					&none &none
+                    >;
+            };	
 
+            mouse_i3goto {
+                bindings = <
+                    &kp LC(BACKSPACE) &none     &none     &mwh SCROLL_UP   &none    &none          &kp LG(NUM_7) &kp LG(NUM_8) &kp LG(NUM_9) &none
+                    &kp BACKSPACE     &mkp MCLK &mkp RCLK &mkp LCLK        &none 	&none          &kp LG(NUM_4) &kp LG(NUM_5) &kp LG(NUM_6) &kp LG(NUM_0)
+                    &tog NONE_FKEYS   &none     &none     &mwh SCROLL_DOWN &none 	&none          &kp LG(NUM_1) &kp LG(NUM_2) &kp LG(NUM_3) &none
+                    &none             &none  					                    &mo NONE_FKEYS &mo BT_I3MOVETO
+                    >;
+            };	
 
-		sixth_layer {
-		bindings = <
-		&none  &none    &none    &none    &none 		  &none	&kp F7 &kp F8   &kp F9   &kp F10
-		&none  &none    &none    &none    &none 		  &none	&kp F4 &kp F5   &kp F6   &kp F11
-		&none  &none    &none    &none    &none 		  &none	&kp F1 &kp F2   &kp F3   &kp F12
-					 &none &none  					&none &none
-		>;
-		};	
-
-
-		seventh_layer {
-		bindings = <
-		&kp LC(BACKSPACE)  &none    &none  &mwh SCROLL_UP    &none      	&none &kp LG(NUM_7) &kp LG(NUM_8)   &kp LG(NUM_9)  &none
-		&kp BACKSPACE  &mkp MCLK    &mkp RCLK    &mkp LCLK    &none 			&none &kp LG(NUM_4) &kp LG(NUM_5)   &kp LG(NUM_6)   &kp LG(NUM_0)
-		&tog 6  &none  &none    &mwh SCROLL_DOWN &none 			&none &kp LG(NUM_1) &kp LG(NUM_2)   &kp LG(NUM_3)  &none
-					 &none &none  					&mo 5 &mo 7
-		>;
-		};	
-        
-
-		eight_layer {
-		bindings = <
-		&bt BT_SEL 0  &bt BT_SEL 1    &bt BT_SEL 2    &bt BT_SEL 3    &bt BT_SEL 4 			&none &kp LG(LS(NUM_7)) &kp LG(LS(NUM_8))   &kp LG(LS(NUM_9))   &none
-		&none  &none    &none    &none    &none 			&none &kp LG(LS(NUM_4))   &kp LG(LS(NUM_5))   &kp LG(LS(NUM_6))  &kp LG(LS(NUM_0))
-		&out OUT_TOG  &none    &none    &none    &bt BT_CLR 			&none &kp LG(LS(NUM_1))   &kp LG(LS(NUM_2))   &kp LG(LS(NUM_3))  &none
-					 &none &none  					&none &none
-		>;
-		};	
-	};
+            bt_i3moveto {
+                bindings = <
+                    &bt BT_SEL 0 &bt BT_SEL 1 &bt BT_SEL 2 &bt BT_SEL 3 &bt BT_SEL 4   &none &kp LG(LS(NUM_7)) &kp LG(LS(NUM_8)) &kp LG(LS(NUM_9)) &none
+                    &none        &none        &none        &none        &none 		   &none &kp LG(LS(NUM_4)) &kp LG(LS(NUM_5)) &kp LG(LS(NUM_6)) &kp LG(LS(NUM_0))
+                    &out OUT_TOG &none        &none        &none        &bt BT_CLR 	   &none &kp LG(LS(NUM_1)) &kp LG(LS(NUM_2)) &kp LG(LS(NUM_3)) &none
+                    &none        &none  					                           &none &none
+                    >;
+            };	
+        };
 };
