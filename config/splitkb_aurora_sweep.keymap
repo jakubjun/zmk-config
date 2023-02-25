@@ -23,7 +23,7 @@
 / { 
         keymap {
             compatible = "zmk,keymap";
-       		alphas {
+       		default_layer {
                 bindings = <
                     &kp Q              &kp D &kp R &kp W &kp B 	 &kp J   &kp F &kp U    &kp P   &kp SEMICOLON 
                     &kp A              &kp S &kp H &kp T &kp G 	 &kp Y   &kp N &kp E    &kp O   &kp I
@@ -37,11 +37,11 @@
                     &kp EXCL          &kp AT       &kp EQUAL &kp DOLLAR &kp PERCENT   &kp LG(LS(B)) &kp NUM_7 &kp NUM_8 &kp NUM_9 &kp DOT 
                     &kp LPAR          &kp ASTERISK &kp CARET &kp AMPS   &kp RPAR 	  &kp LG(U)     &kp NUM_4 &kp NUM_5 &kp NUM_6 &kp NUM_0 
                     &kp LBKT          &kp RBKT 	   &kp HASH  &kp LBRC   &kp RBRC 	  &kp CAPS      &kp NUM_1 &kp NUM_2 &kp NUM_3 &kp KP_PLUS 
-                    &mo I3SPLIT_I3NAV &kp LCTRL  					                  &none &none 
+                    &mo I3SPLIT_I3NAV &kp LCTRL  					                  &none         &none 
                     >;
             };
 		
-            i3basic_arrows {
+            ibasic_arrows {
                 bindings = <
                     &kp LC(C)     &kp LC(V) &kp GRAVE &kp BACKSLASH &kp LG(LS(SPACE))   &kp UNDERSCORE &kp MINUS &kp SQT   &kp DQT   &kp PIPE
                     &kp ESC       &kp LCTRL &kp LGUI  &kp LSHIFT    &kp LALT  			&kp LEFT       &kp DOWN  &kp UP    &kp RIGHT &kp PSCRN 
@@ -50,7 +50,7 @@
                     >;
             };	
 
-            i3split_i3nav {
+            i3split_inav {
                 bindings = <3
                     &kp LG(Q) &kp LG(V) &kp LG(H) &kp LG(F)     &none 			&none           &none          &none     &none             &none
                     &kp LG(R) &kp LG(W) &kp LG(S) &kp LG(E)     &kp LG(G)  		&kp LG(J)       &kp LG(K)      &kp LG(L) &kp LG(SEMICOLON) &kp LG(A)
@@ -59,7 +59,7 @@
                     >;
             };	
 
-            none_i3move {
+            none_imove {
                 bindings = <
                     &none &none &none &none &none 	  &none	        &none         &none         &none                 &none
                     &none &none &none &none &none 	  &kp LG(LS(J)) &kp LG(LS(K)) &kp LG(LS(L)) &kp LG(LS(SEMICOLON)) &none
@@ -77,7 +77,7 @@
                     >;
             };	
 
-            mouse_i3goto {
+            mouse_igoto {
                 bindings = <
                     &kp LC(BACKSPACE) &none     &none     &mwh SCROLL_UP   &none    &none          &kp LG(NUM_7) &kp LG(NUM_8) &kp LG(NUM_9) &none
                     &kp BACKSPACE     &mkp MCLK &mkp RCLK &mkp LCLK        &none 	&none          &kp LG(NUM_4) &kp LG(NUM_5) &kp LG(NUM_6) &kp LG(NUM_0)
@@ -86,7 +86,7 @@
                     >;
             };	
 
-            bt_i3moveto {
+            bt_imoveto {
                 bindings = <
                     &bt BT_SEL 0 &bt BT_SEL 1 &bt BT_SEL 2 &bt BT_SEL 3 &bt BT_SEL 4   &none &kp LG(LS(NUM_7)) &kp LG(LS(NUM_8)) &kp LG(LS(NUM_9)) &none
                     &none        &none        &none        &none        &none 		   &none &kp LG(LS(NUM_4)) &kp LG(LS(NUM_5)) &kp LG(LS(NUM_6)) &kp LG(LS(NUM_0))
