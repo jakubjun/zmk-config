@@ -82,7 +82,7 @@
                 bindings = <
                     &kp LC(BACKSPACE) &none     &none     &mwh SCROLL_UP   &none    &none          &kp LG(NUM_7) &kp LG(NUM_8) &kp LG(NUM_9) &none
                     &kp BACKSPACE     &mkp MCLK &mkp RCLK &mkp LCLK        &none 	&none          &kp LG(NUM_4) &kp LG(NUM_5) &kp LG(NUM_6) &kp LG(NUM_0)
-                    &tog NONE_FKEYS   &none     &none     &mwh SCROLL_DOWN &none 	&none          &kp LG(NUM_1) &kp LG(NUM_2) &kp LG(NUM_3) &none
+                    &none             &none     &none     &mwh SCROLL_DOWN &none 	&none          &kp LG(NUM_1) &kp LG(NUM_2) &kp LG(NUM_3) &none
                     &none             &none  					                    &mo NONE_FKEYS &mo BT_WMMOVETO
                     >;
             };	
